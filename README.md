@@ -20,7 +20,9 @@ et de tout le vecteur x. Puisque A et x restent constants, on peut calculer chaq
 indépendamment les uns des autres.
 
 for (i = 0; i < NB_LIGNES; i++) 
+
 for (j = 0; j < NB_COLONNES; j++) 
+
 y[i] += A[i][j] * x[j];
 
 on propose un programme en utilisant les threads pour le calcul du vecteur y tel que chaque élément de ce 
