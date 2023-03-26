@@ -18,6 +18,7 @@ comment le vecteur résultat y est calculé à partir de la matrice A et du vect
 voit que le i-ième élément du vecteur y est calculé à partir seulement de la i-ième ligne de la matrice A 
 et de tout le vecteur x. Puisque A et x restent constants, on peut calculer chaque élément du vecteur y 
 indépendamment les uns des autres.
+
 for (i = 0; i < NB_LIGNES; i++) 
 for (j = 0; j < NB_COLONNES; j++) 
 y[i] += A[i][j] * x[j];
