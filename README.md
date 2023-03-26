@@ -29,3 +29,15 @@ vecteur soit calculé en parallèle par rapport aux autres .
 Le programme utilise la bibliothèque pthread pour créer plusieurs threads qui vont calculer indépendamment les éléments du vecteur y. Chaque thread utilise une portion différente de la matrice A et du vecteur x pour calculer les éléments correspondants de y. La variable mutex est utilisée pour éviter les conflits d'accès lors de la mise à jour des éléments de y.
 
 La variable NB_THREADS peut être ajustée pour optimiser les performances en fonction des caractéristiques du système.
+
+### Exercice 2 : Application client-serveur.
+
+On désire simuler un mécanisme client-serveur de réservation de places. Il y a 100 places qui sont 
+représentées par un tableau place de 100 entiers : place[i] vaut 0 si la place est libre et vaut le numéro 
+du client sinon. Les requêtes des clients sont reçues au clavier par le thread initial du serveur qui 
+attend la saisie d’un entier. Si cet entier est supérieur ou égal à 0, il indique le nombre de places 
+demandées par le client, sinon il indique l’arrêt des demandes de réservation et provoque l’affichage 
+final du tableau de places. Après chaque demande de réservation, le thread initial créera un thread 
+annexe pour traiter la demande et se remettra en attente d’une nouvelle requête. Les clients sont 
+numérotés par ordre d’arrivée. Implémentez un programme respectant cette spécification. Vous 
+veillerez en particulier à mettre en place les synchronisations nécessaires.
